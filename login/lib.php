@@ -27,10 +27,17 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-define('PWRESET_STATUS_NOEMAILSENT', 1);
-define('PWRESET_STATUS_TOKENSENT', 2);
-define('PWRESET_STATUS_OTHEREMAILSENT', 3);
-define('PWRESET_STATUS_ALREADYSENT', 4);
+/**
+* If already defined in custom auth plugins
+*/
+if (!defined('PWRESET_STATUS_NOEMAILSENT'))
+    define('PWRESET_STATUS_NOEMAILSENT', 1);
+if (!defined('PWRESET_STATUS_TOKENSENT'))
+    define('PWRESET_STATUS_TOKENSENT', 2);
+if (!defined('PWRESET_STATUS_OTHEREMAILSENT'))
+    define('PWRESET_STATUS_OTHEREMAILSENT', 3);
+if (!defined('PWRESET_STATUS_ALREADYSENT'))
+    define('PWRESET_STATUS_ALREADYSENT', 4);
 
 /**
  *  Processes a user's request to set a new password in the event they forgot the old one.
